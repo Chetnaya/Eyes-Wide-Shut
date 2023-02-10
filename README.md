@@ -1,1 +1,2 @@
-# FPS-shooter
+# Eyes Wide Shut
+And FPS shooter game
