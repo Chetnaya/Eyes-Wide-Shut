@@ -8,16 +8,20 @@ public class InputManager : MonoBehaviour
     //A refrence to the Player Input Script
     private PlayerInput playerinput;
     private PlayerInput.OnFootActions onFoot;
+
+    private PlayerMotor motor;
     
     void Awake()
     {
         playerinput = new PlayerInput();
         onFoot = playerinput.OnFoot;
+        motor = Getcomponent<PlayerMotor>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        
+        //Asking the Player motor to move using the value from our movement action.
+        motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>()); 
     }
 
     //To enable our Action map
