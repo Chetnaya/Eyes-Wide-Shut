@@ -16,6 +16,8 @@ public class InputManager : MonoBehaviour
         playerinput = new PlayerInput();
         onFoot = playerinput.OnFoot;
         motor = GetComponent<PlayerMotor>();
+        // ctx = call back context
+        onFoot.Jump.performed += ctx => motor.Jump();
     }
 
     void FixedUpdate()
