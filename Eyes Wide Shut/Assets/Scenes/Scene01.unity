@@ -445,6 +445,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1358329271 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4218226967141011117, guid: 13e3eb8726c748f4494697a62e95ed8d, type: 3}
+  m_PrefabInstance: {fileID: 4218226966331374007}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1996413115
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,3 +637,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67e1ebb45f527ec42a40f8dcb3668202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4218226966331374015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4218226966331374008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ccc82537a0845418ad7d9dd9d70b3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1358329271}
+  xSensitivity: 30
+  ySensitivity: 30

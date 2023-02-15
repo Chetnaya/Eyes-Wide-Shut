@@ -10,12 +10,16 @@ public class InputManager : MonoBehaviour
     private PlayerInput.OnFootActions onFoot;
 
     private PlayerMotor motor;
+    private PlayerLook look;
     
     void Awake()
     {
         playerinput = new PlayerInput();
         onFoot = playerinput.OnFoot;
+
         motor = GetComponent<PlayerMotor>();
+        look = GetComponent<PlayerLook>();
+
         // ctx = call back context
         onFoot.Jump.performed += ctx => motor.Jump();
     }
@@ -24,6 +28,11 @@ public class InputManager : MonoBehaviour
     {
         //Asking the Player motor to move using the value from our movement action.
         motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>()); 
+    }
+    
+    void LateUpdate()
+    {
+        look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
     }
 
     //To enable our Action map

@@ -20,9 +20,9 @@ public class PlayerLook : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -80f, 80f);
 
         //apply this to the camera tranform
-        cam.tranfornm.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        cam.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
 
         //rotate player to look left and right
-        tranform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivity);
+        transform.Rotate(Vector3.up * (mouseX * Time.deltaTime) * xSensitivity);
     }
 }
