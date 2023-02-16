@@ -36,7 +36,7 @@ public class PlayerInteract : MonoBehaviour
         {
             if(hitInfo.collider.GetComponent<Interactable>()!= null)
             {
-                PlayerUI.UpdateText(hitInfo.collider.GetComponent<Interactable>().promtMessage);
+                playerUI.UpdateText(hitInfo.collider.GetComponent<Interactable>().promtMessage);
             }
         }
     }
