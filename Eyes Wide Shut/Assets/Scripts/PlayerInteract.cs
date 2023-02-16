@@ -8,6 +8,8 @@ public class PlayerInteract : MonoBehaviour
 
     [SerializeField]
     private float distance = 3f;
+    [SerializeField]
+    private LayerMask mask;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +24,16 @@ public class PlayerInteract : MonoBehaviour
         //new Ray(First part is the origin, and the Direction)
         Ray ray = new Ray(cam.transform.position, cam.transform.forward );
         Debug.DrawRay(ray.origin, ray.direction * distance);
+
+        //Variable to store our RayCast hit or our collision info
+        RaycastHit hitInfo ;
+        //To check if we have actually hit anything
+        if (Physics.Raycast(ray, out hitInfo, distance, mask))
+        {
+            if(hitInfo.collider.GetComponent<Interactable>()!= null)
+            {
+                Debug.Log(hitInfo.collider.GetComponent<Interactable>().promtMessage);
+            }
+        }
     }
 }
