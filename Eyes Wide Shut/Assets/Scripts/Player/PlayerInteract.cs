@@ -11,15 +11,19 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField]
     private LayerMask mask;
 
+    private PlayerUI playerUI;
+
     // Start is called before the first frame update
     void Start()
     {
         cam = GetComponent<PlayerLook>().cam;
+        playerUI = GetComponent<PlayerUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerUI.UpdateText(string.Empty);
         //Creates a ray at the centre of the camera , shooting outwards.
         //new Ray(First part is the origin, and the Direction)
         Ray ray = new Ray(cam.transform.position, cam.transform.forward );
@@ -32,7 +36,7 @@ public class PlayerInteract : MonoBehaviour
         {
             if(hitInfo.collider.GetComponent<Interactable>()!= null)
             {
-                Debug.Log(hitInfo.collider.GetComponent<Interactable>().promtMessage);
+                PlayerUI.UpdateText(hitInfo.collider.GetComponent<Interactable>().promtMessage);
             }
         }
     }
