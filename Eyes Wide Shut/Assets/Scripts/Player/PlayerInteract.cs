@@ -13,11 +13,15 @@ public class PlayerInteract : MonoBehaviour
 
     private PlayerUI playerUI;
 
+    private InputManager inputManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
         cam = GetComponent<PlayerLook>().cam;
         playerUI = GetComponent<PlayerUI>();
+        inputManager = GetComponent<InputManager>();
     }
 
     // Update is called once per frame
@@ -32,11 +36,21 @@ public class PlayerInteract : MonoBehaviour
         //Variable to store our RayCast hit or our collision info
         RaycastHit hitInfo ;
         //To check if we have actually hit anything
+        //RayCasting to the centre of the screen
         if (Physics.Raycast(ray, out hitInfo, distance, mask))
         {
+            //Checking to see if out game component has an interactable component
             if(hitInfo.collider.GetComponent<Interactable>()!= null)
             {
-                playerUI.UpdateText(hitInfo.collider.GetComponent<Interactable>().promtMessage);
+                //If it does, storing that interactable in a variable
+                Interactable interactable= hitInfo.collider.GetComponent<Interactable>();
+                //Updating OnScreen Text
+                playerUI.UpdateText(interactable.promtMessage);
+                if(inputManager.OnFoot.Interact.triggered)
+                {
+                    interactable.BaseInteract()
+
+                }
             }
         }
     }
