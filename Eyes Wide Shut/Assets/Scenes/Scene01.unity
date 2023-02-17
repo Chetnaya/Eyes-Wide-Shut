@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 0
   m_FogColor: {r: 1, g: 1, b: 1, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0
+  m_FogDensity: 0.1
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -27,9 +27,9 @@ RenderSettings:
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 4e154bf235e41704bbd6bbc6fd6c63f6, type: 2}
-  m_HaloStrength: 0.917
+  m_HaloStrength: 0.5
   m_FlareStrength: 1
-  m_FlareFadeSpeed: 1.62
+  m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
@@ -2197,7 +2197,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703c61adc40c1da4a9ebab0bd292910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useEvents: 1
   promtMessage: Interact
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
   door: {fileID: 928254475}
 --- !u!65 &443934827
 BoxCollider:
@@ -2212,6 +2216,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.8, z: 0.25}
   m_Center: {x: -0.53, y: 1.45, z: 0.05}
+--- !u!114 &443934831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443934822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adcc03aa969cbed42a447c6526beab38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &489108053
 GameObject:
   m_ObjectHideFlags: 0
@@ -9363,7 +9382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703c61adc40c1da4a9ebab0bd292910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useEvents: 0
   promtMessage: Interact
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
   door: {fileID: 928254475}
 --- !u!65 &2091042358
 BoxCollider:
@@ -9378,6 +9401,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.05, y: 2.7, z: 0.22}
   m_Center: {x: 0.48, y: 1.47, z: 0}
+--- !u!114 &2091042362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091042350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adcc03aa969cbed42a447c6526beab38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2095155396
 GameObject:
   m_ObjectHideFlags: 0
@@ -9631,6 +9669,10 @@ PrefabInstance:
     - target: {fileID: 1873959679020832755, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1874366112224168019, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
+      propertyPath: m_Name
+      value: LE_0
       objectReference: {fileID: 0}
     - target: {fileID: 1874461058169529343, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_Layer
