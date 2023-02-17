@@ -46,9 +46,9 @@ public class PlayerInteract : MonoBehaviour
                 Interactable interactable= hitInfo.collider.GetComponent<Interactable>();
                 //Updating OnScreen Text
                 playerUI.UpdateText(interactable.promtMessage);
-                if(inputManager.OnFoot.Interact.triggered)
+                if(inputManager.onFoot.Interact.triggered)
                 {
-                    interactable.BaseInteract()
+                    interactable.baseInteract();
 
                 }
             }
