@@ -2209,8 +2209,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: -0.55, y: 1.3, z: 0}
+  m_Size: {x: 1, y: 2.8, z: 0.25}
+  m_Center: {x: -0.53, y: 1.45, z: 0.05}
 --- !u!1 &489108053
 GameObject:
   m_ObjectHideFlags: 0
@@ -5941,7 +5941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: -9.1}
+  m_AnchoredPosition: {x: 41, y: 16}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418956853
@@ -5991,8 +5991,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.92
-  m_fontSizeBase: 20.92
+  m_fontSize: 25.64
+  m_fontSizeBase: 25.64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9338,6 +9338,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   promtMessage: Interact
+--- !u!65 &2091042358
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091042350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.05, y: 2.7, z: 0.22}
+  m_Center: {x: 0.48, y: 1.47, z: 0}
 --- !u!1 &2095155396
 GameObject:
   m_ObjectHideFlags: 0
