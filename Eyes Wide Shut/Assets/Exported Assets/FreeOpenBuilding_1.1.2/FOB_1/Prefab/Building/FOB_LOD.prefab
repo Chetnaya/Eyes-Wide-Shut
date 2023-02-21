@@ -27238,6 +27238,7 @@ Transform:
   - {fileID: 1879231081900616475}
   - {fileID: 1875161217862880896}
   - {fileID: 1875161218648548599}
+  - {fileID: 5920126241553031777}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34075,6 +34076,37 @@ LODGroup:
     - renderer: {fileID: 7617248486185709837}
     - renderer: {fileID: 8151445246049450454}
   m_Enabled: 1
+--- !u!1 &2061651977957972876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5920126241553031777}
+  m_Layer: 0
+  m_Name: Lamps
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5920126241553031777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061651977957972876}
+  m_LocalRotation: {x: -0, y: -0.69314265, z: -0, w: 0.7208005}
+  m_LocalPosition: {x: 1.5242963, y: 3.6690598, z: 4.530771}
+  m_LocalScale: {x: 0.99999976, y: 1, z: 0.99999976}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1875161217831392945}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2063258808545879408
 GameObject:
   m_ObjectHideFlags: 0
