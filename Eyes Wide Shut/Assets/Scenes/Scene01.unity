@@ -2268,9 +2268,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useEvents: 1
   promtMessage: Interact
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls: []
   door: {fileID: 928254475}
 --- !u!65 &443934827
 BoxCollider:
@@ -9464,11 +9461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 703c61adc40c1da4a9ebab0bd292910f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useEvents: 1
+  useEvents: 0
   promtMessage: Interact
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls: []
   door: {fileID: 928254475}
 --- !u!65 &2091042358
 BoxCollider:
