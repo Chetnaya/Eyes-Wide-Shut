@@ -20,7 +20,7 @@ public class InteractableEditor : Editor
         }
 
         else
-        (
+        {
             base.OnInspectorGUI();
             if(interactable.useEvents)
             {
@@ -38,7 +38,7 @@ public class InteractableEditor : Editor
                 }
             }
 
-        )
+        }
         
             
         
