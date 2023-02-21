@@ -14,13 +14,16 @@ public class InteractableEditor : Editor
             {
                 interactable.gameObject.AddComponent<InteractionEvents>();
             }
-            else
+        }
+        else
+        {
             if(interactable.GetComponent<InteractionEvents>() != null)
             {
                 DestroyImmediate(interactable.GetComponent<InteractionEvents>());
             }
-            
         }
+            
+        
     }
 }
 

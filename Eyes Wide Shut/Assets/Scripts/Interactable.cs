@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
+// using UnityEngine.Events;
 using UnityEditor;
 
 //This script follows the "template method pattern"
@@ -28,13 +28,13 @@ public abstract class Interactable : MonoBehaviour
     }
 
     // Unity Event to trigger when the object is interacted with
-    // public UnityEvent onInteract;
-    public UnityEvent OnInteract = new UnityEvent();
+   
+    // public UnityEvent OnInteract = new UnityEvent();
 
     protected virtual void Interact()
     {
         // Invoke the Unity Event
-        OnInteract.Invoke();
+        // OnInteract.Invoke();
     }
     // protected virtual void Interact()
     // {
