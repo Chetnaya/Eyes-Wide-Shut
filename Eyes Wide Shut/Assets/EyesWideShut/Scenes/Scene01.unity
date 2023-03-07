@@ -802,8 +802,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 981054713}
   audioSource: {fileID: 1471320947}
-  fadeTime: 2
+  fadeTime: 1
   speed: 167.97
+  overallVolume: 0.04
 --- !u!4 &31930372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013295979216, guid: b3faa789917d5c74cb7bc3765ff6950c, type: 3}
@@ -4809,15 +4810,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4218226966430317433, guid: 13e3eb8726c748f4494697a62e95ed8d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2424.3
+      value: -2331.3
       objectReference: {fileID: 0}
     - target: {fileID: 4218226966430317433, guid: 13e3eb8726c748f4494697a62e95ed8d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 49.1
+      value: 70.4
       objectReference: {fileID: 0}
     - target: {fileID: 4218226966430317433, guid: 13e3eb8726c748f4494697a62e95ed8d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1784.9
+      value: 1790.7
       objectReference: {fileID: 0}
     - target: {fileID: 4218226966430317433, guid: 13e3eb8726c748f4494697a62e95ed8d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16647,16 +16648,16 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 96d178de048bbd344ab93a6ff2dc99fc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.879
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 64
+  Priority: 41
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 115.64
+  MaxDistance: 132.5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -16739,7 +16740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471320946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2335.97, y: 61.7, z: 1789.76}
+  m_LocalPosition: {x: -2333.1, y: 69.48, z: 1789.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
