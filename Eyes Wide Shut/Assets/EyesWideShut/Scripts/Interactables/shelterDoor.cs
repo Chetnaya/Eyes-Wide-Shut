@@ -9,39 +9,30 @@ public class shelterDoor : Interactable
     private GameObject door;
     private bool doorOpen;
 
-    // public GameObject dialogue01;
-    // public GameObject dialogue02;
+    [SerializeField]
+    private AudioSource doorOpenSound;
 
-    // Start is called before the first frame update
-    // void Start()
-    // {
-    //     // Disable Dialogue 02 object initially
-    //     dialogue02.SetActive(false);
-    // }
+    [SerializeField]
+    private AudioSource doorCloseSound;
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        doorOpenSound = doorOpenSound .GetComponent<AudioSource>();
+        doorCloseSound = doorCloseSound.GetComponent<AudioSource>();
     }
 
-    //Design interaction using code
     protected override void Interact()
     {
         doorOpen = !doorOpen;
         door.GetComponent<Animator>().SetBool("IsOpen", doorOpen);
 
-        // Disable Dialogue 01 and enable Dialogue 02 when the door is opened
-        // if (doorOpen)
-        // {
-        //     dialogue01.SetActive(false);
-        //     dialogue02.SetActive(true);
-        // }
-        // // Disable Dialogue 02 and enable Dialogue 01 when the door is closed
-        // else
-        // {
-        //     dialogue01.SetActive(true);
-        //     dialogue02.SetActive(false);
-        // }
+        if (doorOpen)
+        {
+            doorOpenSound.Play();
+        }
+        else
+        {
+            doorCloseSound.Play();
+        }
     }
 }
