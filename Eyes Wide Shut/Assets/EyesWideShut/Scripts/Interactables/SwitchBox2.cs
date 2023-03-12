@@ -12,6 +12,7 @@ public class SwitchBox2 : Interactable
     
     public GameObject dialogue02;
     public GameObject dialogue03;
+    public GameObject dialogue04;
 
     void Start()
     {
@@ -31,6 +32,8 @@ public class SwitchBox2 : Interactable
             isLightOn = true;
             dialogue02.SetActive(false);
             dialogue03.SetActive(true);
+
+            dialogue04.SetActive(false);
         }
         else
         {
@@ -42,6 +45,8 @@ public class SwitchBox2 : Interactable
             isLightOn = false;
             dialogue02.SetActive(true);
             dialogue03.SetActive(false);
+
+            dialogue04.SetActive(false);
         }
     }
 }

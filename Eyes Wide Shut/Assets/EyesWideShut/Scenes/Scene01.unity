@@ -13488,6 +13488,7 @@ MonoBehaviour:
   - {fileID: 1257159495}
   dialogue02: {fileID: 1830597509}
   dialogue03: {fileID: 1805169101}
+  dialogue04: {fileID: 49274770}
 --- !u!65 &1101092004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18144,13 +18145,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1507912957}
   - component: {fileID: 1507912956}
+  - component: {fileID: 1507912958}
   m_Layer: 0
   m_Name: Collider02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1507912956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18162,8 +18164,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.1243777, y: 1.9315605, z: 2.5375977}
-  m_Center: {x: 1.6108267, y: -0.11914253, z: 0.51317847}
+  m_Size: {x: 8.368787, y: 1.9315605, z: 2.5375977}
+  m_Center: {x: 1.6924659, y: -0.11914253, z: 0.5131749}
 --- !u!4 &1507912957
 Transform:
   m_ObjectHideFlags: 0
@@ -18172,13 +18174,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507912955}
   m_LocalRotation: {x: -0, y: -0.71474856, z: -0, w: 0.69938153}
-  m_LocalPosition: {x: -2419.73, y: 49.803276, z: 1790.97}
+  m_LocalPosition: {x: -2421.06, y: 49.803276, z: 1790.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -91.245, z: 0}
+--- !u!114 &1507912958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507912955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af37fc6912a181248bf8ffabadd872b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue02: {fileID: 1830597509}
+  dialogue03: {fileID: 1805169101}
+  collider02: {fileID: 1507912956}
 --- !u!4 &1510367757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4261960537057858, guid: 24b4d8ad04155c244b2b776c5532e76f, type: 3}
@@ -21097,7 +21114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1760123649
 RectTransform:
   m_ObjectHideFlags: 0
