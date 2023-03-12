@@ -6533,15 +6533,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 472659866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e0b19e66b93f644ca01e3d6d8976f14, type: 3}
+  m_Script: {fileID: 11500000, guid: e226a8ee4440f7044a8100f91b81ad3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue01: {fileID: 1760123648}
   dialogue02: {fileID: 1830597509}
-  dialogue03: {fileID: 1805169101}
-  dialogue04: {fileID: 49274770}
   collider01: {fileID: 472659867}
-  collider02: {fileID: 1507912956}
 --- !u!1 &474743208
 GameObject:
   m_ObjectHideFlags: 0
@@ -18147,7 +18144,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1507912957}
   - component: {fileID: 1507912956}
-  - component: {fileID: 1507912958}
   m_Layer: 0
   m_Name: Collider02
   m_TagString: Untagged
@@ -18183,24 +18179,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: -91.245, z: 0}
---- !u!114 &1507912958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507912955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e0b19e66b93f644ca01e3d6d8976f14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue01: {fileID: 1760123648}
-  dialogue02: {fileID: 1830597509}
-  dialogue03: {fileID: 1805169101}
-  dialogue04: {fileID: 49274770}
-  collider01: {fileID: 472659867}
-  collider02: {fileID: 1507912956}
 --- !u!4 &1510367757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4261960537057858, guid: 24b4d8ad04155c244b2b776c5532e76f, type: 3}
@@ -21119,7 +21097,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1760123649
 RectTransform:
   m_ObjectHideFlags: 0
