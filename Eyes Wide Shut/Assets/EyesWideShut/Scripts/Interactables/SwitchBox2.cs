@@ -14,9 +14,12 @@ public class SwitchBox2 : Interactable
     public GameObject dialogue03;
     public GameObject dialogue04;
 
+    public AudioSource SwitchOnSound;
+
     void Start()
     {
         dialogue03.SetActive(false);
+        SwitchOnSound = SwitchOnSound.GetComponent<AudioSource>();
     }
 
     // Override the base Interact() method to toggle the light intensity
@@ -34,6 +37,8 @@ public class SwitchBox2 : Interactable
             dialogue03.SetActive(true);
 
             dialogue04.SetActive(false);
+
+            SwitchOnSound.Play();
         }
         else
         {
@@ -47,6 +52,8 @@ public class SwitchBox2 : Interactable
             dialogue03.SetActive(false);
 
             dialogue04.SetActive(false);
+
+            SwitchOnSound.Play();
         }
     }
 }
