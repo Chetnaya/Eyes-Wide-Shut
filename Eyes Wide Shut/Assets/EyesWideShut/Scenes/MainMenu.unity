@@ -8496,7 +8496,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2015873427}
+      - m_Target: {fileID: 274294996}
         m_TargetAssemblyTypeName: MenuCamControlller, Assembly-CSharp
         m_MethodName: setMount
         m_Mode: 2
