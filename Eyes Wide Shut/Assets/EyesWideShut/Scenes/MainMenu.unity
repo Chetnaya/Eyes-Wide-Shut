@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentMount: {fileID: 1638799191}
-  speedFactor: 0.1
+  speedFactor: 0.07
 --- !u!4 &274294997
 Transform:
   m_ObjectHideFlags: 0
