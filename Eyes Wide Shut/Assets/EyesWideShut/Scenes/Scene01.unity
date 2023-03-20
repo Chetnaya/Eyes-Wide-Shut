@@ -6751,13 +6751,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 472659866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2417.602, y: 49.803276, z: 1785.417}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -791.9021, y: 25.603275, z: 353.917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 761768625}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &472659869
 MonoBehaviour:
@@ -8877,7 +8877,7 @@ Transform:
   - {fileID: 731645609}
   - {fileID: 281874437}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &653669256
 GameObject:
@@ -10181,6 +10181,8 @@ Transform:
   - {fileID: 381065138}
   - {fileID: 117408666}
   - {fileID: 1271827603}
+  - {fileID: 472659868}
+  - {fileID: 1202606012}
   m_Father: {fileID: 1408806244}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14129,7 +14131,7 @@ MonoBehaviour:
   - {fileID: 1257159495}
   dialogue02: {fileID: 1830597509}
   dialogue03: {fileID: 1805169101}
-  dialogue04: {fileID: 0}
+  dialogue04: {fileID: 536061962}
   SwitchOnSound: {fileID: 281874438}
 --- !u!65 &1101092004
 BoxCollider:
@@ -15427,6 +15429,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4218226967141011116, guid: 13e3eb8726c748f4494697a62e95ed8d, type: 3}
   m_PrefabInstance: {fileID: 370304164}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1202606011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1202606012}
+  - component: {fileID: 1202606015}
+  - component: {fileID: 1202606014}
+  - component: {fileID: 1202606013}
+  m_Layer: 0
+  m_Name: Collider02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1202606012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202606011}
+  m_LocalRotation: {x: -0, y: 0.6921474, z: -0, w: 0.7217563}
+  m_LocalPosition: {x: -794.74, y: 25.603275, z: 365.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 761768625}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 87.601, z: 0}
+--- !u!114 &1202606013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202606011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af37fc6912a181248bf8ffabadd872b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue02: {fileID: 0}
+  dialogue03: {fileID: 0}
+  collider02: {fileID: 1202606015}
+--- !u!114 &1202606014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202606011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e226a8ee4440f7044a8100f91b81ad3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue01: {fileID: 1760123648}
+  dialogue02: {fileID: 1830597509}
+  collider01: {fileID: 1202606015}
+--- !u!65 &1202606015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202606011}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2088457, y: 1.9315605, z: 2.5375977}
+  m_Center: {x: 0.4933393, y: -0.11914253, z: 0.5131837}
 --- !u!1 &1205618022
 GameObject:
   m_ObjectHideFlags: 0
@@ -15520,7 +15599,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -25212,7 +25291,6 @@ MonoBehaviour:
   promtMessage: Talk
   dialogue04: {fileID: 536061962}
   dialogue03: {fileID: 1805169101}
-  dialogue05: {fileID: 1765965020}
 --- !u!1 &2055326637
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Collider02 : MonoBehaviour
 {
-    public GameObject dialogue02;
-    public GameObject dialogue03;
+    public GameObject dialogue05;
+    public GameObject dialoguebox4;
     public BoxCollider collider02;
 
     // void Start()
