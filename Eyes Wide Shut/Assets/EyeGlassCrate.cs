@@ -10,10 +10,17 @@ public class EyeGlassCrate : Interactable
 
     public GameObject eyeGlass;
 
+    [SerializeField]
+    private AudioSource crateOpenSound;
+
+    [SerializeField]
+    private AudioSource crateCloseSound;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        doorOpenSound = crateOpenSound .GetComponent<AudioSource>();
+        crateCloseSound = crateCloseSound.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +44,15 @@ public class EyeGlassCrate : Interactable
         {
             eyeGlass.GetComponent<BoxCollider>().enabled = true;
             //Enable the box collider of eye glass
+        }
+
+        if (CrateIsOpen)
+        {
+            crateCloseSound.Play();
+        }
+        else
+        {
+            crateCloseSound.Play();
         }
     }
 }
