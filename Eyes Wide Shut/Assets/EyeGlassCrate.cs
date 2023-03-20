@@ -8,6 +8,8 @@ public class EyeGlassCrate : Interactable
     private GameObject EyeGlassCreate;
     private bool CrateIsOpen;
 
+    public GameObject eyeGlass;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +27,16 @@ public class EyeGlassCrate : Interactable
     {
         CrateIsOpen = !CrateIsOpen;
         EyeGlassCreate.GetComponent<Animator>().SetBool("CrateIsOpen", CrateIsOpen);
+
+        if(!CrateIsOpen)
+        {
+            eyeGlass.GetComponent<BoxCollider>().enabled = false;
+            //Disable the box collider of eye glass
+        }
+        else
+        {
+            eyeGlass.GetComponent<BoxCollider>().enabled = true;
+            //Enable the box collider of eye glass
+        }
     }
 }
