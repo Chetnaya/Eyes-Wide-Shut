@@ -19,7 +19,7 @@ public class EyeGlassCrate : Interactable
     // Start is called before the first frame update
     void Start()
     {
-        doorOpenSound = crateOpenSound .GetComponent<AudioSource>();
+        crateOpenSound = crateOpenSound .GetComponent<AudioSource>();
         crateCloseSound = crateCloseSound.GetComponent<AudioSource>();
     }
 
@@ -48,7 +48,7 @@ public class EyeGlassCrate : Interactable
 
         if (CrateIsOpen)
         {
-            crateCloseSound.Play();
+            crateOpenSound.Play();
         }
         else
         {
