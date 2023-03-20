@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EyeGlass : MonoBehaviour
+public class EyeGlass : Interactable
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject dialogue05;
+    public GameObject EyeGlassPanel;
+    
+    protected override void Interact()
     {
-        
-    }
+        EyeGlassPanel.SetActive(true);
+        dialogue05.SetActive(false);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

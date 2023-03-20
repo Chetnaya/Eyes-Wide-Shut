@@ -13,6 +13,9 @@ public class SwitchBox2 : Interactable
     public GameObject dialogue02;
     public GameObject dialogue03;
     public GameObject dialogue04;
+    public GameObject dialogue05;
+
+    
 
     public AudioSource SwitchOnSound;
 
@@ -37,6 +40,9 @@ public class SwitchBox2 : Interactable
             dialogue03.SetActive(true);
 
             dialogue04.SetActive(false);
+            dialogue05.SetActive(false);
+
+            
 
             SwitchOnSound.Play();
         }
@@ -52,6 +58,7 @@ public class SwitchBox2 : Interactable
             dialogue03.SetActive(false);
 
             dialogue04.SetActive(false);
+            dialogue05.SetActive(false);
 
             SwitchOnSound.Play();
         }

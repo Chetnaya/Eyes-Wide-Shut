@@ -5,6 +5,8 @@ using UnityEngine;
 public class Collider02 : MonoBehaviour
 {
     public GameObject dialogue05;
+    public GameObject dialogue02;
+
     public GameObject dialoguebox4;
     public BoxCollider collider02;
 
@@ -17,8 +19,10 @@ public class Collider02 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            dialoguebox4.SetActive(false);
+            dialogue05.SetActive(true);
+
             dialogue02.SetActive(false);
-            dialogue03.SetActive(false);
             collider02.enabled = false;
         }
     }

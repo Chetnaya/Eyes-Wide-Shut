@@ -7,6 +7,8 @@ public class Lieutenant : Interactable
     // bool dialogue04Enabled = false;
     public GameObject dialogue04;
     public GameObject dialogue03;
+
+    public GameObject dialogue05;
     // public GameObject dialogue05;
 
     // Start is called before the first frame update
@@ -30,6 +32,8 @@ public class Lieutenant : Interactable
     {
         dialogue03.SetActive(false);
         dialogue04.SetActive(true);
+
+        dialogue05.SetActive(false);
 
 
         // dialogue03.SetActive(false);
