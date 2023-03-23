@@ -9607,6 +9607,7 @@ MonoBehaviour:
   eyeGlassintro: {fileID: 976184012}
   dialogue05: {fileID: 1765965020}
   EyeGlassPanel: {fileID: 1205618022}
+  PointerImage: {fileID: 2139265728}
 --- !u!4 &683265595 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011955731940, guid: ee5ce8c8eaa133d43a291b519c442236, type: 3}
@@ -28641,12 +28642,12 @@ GameObject:
   - component: {fileID: 2139265730}
   - component: {fileID: 2139265732}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Pointer Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2139265729
 RectTransform:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class EyeGlass : Interactable
 
     public GameObject dialogue05;
     public GameObject EyeGlassPanel;
+    public GameObject PointerImage;
 
     void Start()
     {
@@ -20,7 +21,8 @@ public class EyeGlass : Interactable
         EyeGlassPanel.SetActive(true);
         dialogue05.SetActive(false);
 
-        eyeGlassintro.Play();
+        PointerImage.SetActive(true);
 
+        eyeGlassintro.Play();
     }
 }
