@@ -16556,7 +16556,7 @@ Transform:
   m_Children:
   - {fileID: 2053540651}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1197354550 stripped
 Transform:
@@ -23036,6 +23036,7 @@ MonoBehaviour:
   useEvents: 0
   promtMessage: open
   EntryDoor: {fileID: 1654476332}
+  PointerImage: {fileID: 2139265728}
 --- !u!95 &1654476338
 Animator:
   serializedVersion: 4
@@ -28570,7 +28571,7 @@ Transform:
   - {fileID: 1356188822}
   - {fileID: 344520857}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2125975896 stripped
 Transform:
