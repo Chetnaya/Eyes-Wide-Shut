@@ -10,6 +10,6 @@ public class ShelterEntryDoor : Interactable
     protected override void Interact()
     {
         isOpen = !isOpen;
-        EntryDoor.GetComponent<Animator>().SetBool("EntryDoorIsOpen", isOpen);
+        EntryDoor.GetComponent<Animator>().SetBool("S.DoorIsOpen", isOpen);
     }
 }
