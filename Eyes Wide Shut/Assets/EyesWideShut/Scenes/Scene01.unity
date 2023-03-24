@@ -14662,6 +14662,7 @@ MonoBehaviour:
   Objectives:
   - {fileID: 1654476333}
   - {fileID: 928254478}
+  objectiveIndex: 0
 --- !u!222 &1071731800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23044,6 +23045,7 @@ MonoBehaviour:
   promtMessage: open
   EntryDoor: {fileID: 1654476332}
   PointerImage: {fileID: 2139265728}
+  arrowScript: {fileID: 1071731799}
 --- !u!95 &1654476338
 Animator:
   serializedVersion: 4
@@ -28406,7 +28408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7659736355775544501, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_Name
-      value: Base - Entry Door
+      value: Centre - Entry Door
       objectReference: {fileID: 0}
     - target: {fileID: 7753745407040278918, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_RootOrder

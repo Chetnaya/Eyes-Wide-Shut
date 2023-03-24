@@ -8,6 +8,8 @@ public class ShelterEntryDoor : Interactable
     private bool isOpen;
     public GameObject PointerImage;
 
+    public Arrow arrowScript;
+
     protected override void Interact()
     {
         isOpen = !isOpen;
@@ -17,6 +19,7 @@ public class ShelterEntryDoor : Interactable
         {
             //Disable Pointer
             PointerImage.SetActive(false);
+            arrowScript.objectiveIndex = 1;
 
             //Door open sound
         }
@@ -24,8 +27,11 @@ public class ShelterEntryDoor : Interactable
         {
             //Enable Pointer
             PointerImage.SetActive(true);
+           
 
             //Door close sound
         }
+
+       
     }
 }
