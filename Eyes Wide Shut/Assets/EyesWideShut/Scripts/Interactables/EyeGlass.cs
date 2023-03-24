@@ -11,6 +11,7 @@ public class EyeGlass : Interactable
     public GameObject EyeGlassPanel;
     public GameObject PointerImage;
     public GameObject shelterEntryDoor;
+    public GameObject ShelterDoorBoxCollider;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class EyeGlass : Interactable
         PointerImage.SetActive(true);
 
         shelterEntryDoor.GetComponent<BoxCollider>().enabled = true;
+        ShelterDoorBoxCollider.SetActive(false);
 
         eyeGlassintro.Play();
     }
