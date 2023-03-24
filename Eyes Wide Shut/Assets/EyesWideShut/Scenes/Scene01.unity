@@ -9608,6 +9608,7 @@ MonoBehaviour:
   dialogue05: {fileID: 1765965020}
   EyeGlassPanel: {fileID: 1205618022}
   PointerImage: {fileID: 2139265728}
+  shelterEntryDoor: {fileID: 1654476332}
 --- !u!4 &683265595 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011955731940, guid: ee5ce8c8eaa133d43a291b519c442236, type: 3}
@@ -22885,7 +22886,7 @@ BoxCollider:
   m_GameObject: {fileID: 1654476332}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -23694,7 +23695,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1760123649
 RectTransform:
   m_ObjectHideFlags: 0
