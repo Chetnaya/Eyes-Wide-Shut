@@ -13461,6 +13461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pipes_set_v1_bend_d
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010251953910, guid: dc6d044e41bc7d943964e919cfcc6226, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012704316454, guid: dc6d044e41bc7d943964e919cfcc6226, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -16304,6 +16308,10 @@ PrefabInstance:
     - target: {fileID: 1000013628716364, guid: ee5ce8c8eaa133d43a291b519c442236, type: 3}
       propertyPath: m_Name
       value: Electric_box_v3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013628716364, guid: ee5ce8c8eaa133d43a291b519c442236, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4000011955731940, guid: ee5ce8c8eaa133d43a291b519c442236, type: 3}
       propertyPath: m_RootOrder
@@ -25504,7 +25512,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1835895616}
-  m_Layer: 0
+  - component: {fileID: 1835895617}
+  - component: {fileID: 1835895618}
+  m_Layer: 6
   m_Name: Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25528,6 +25538,57 @@ Transform:
   m_Father: {fileID: 761768625}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1835895617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835895615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec2b57693fbdf04581839df72c13a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useEvents: 0
+  promtMessage: Turn Lights on
+  StreetLights:
+  - {fileID: 797153550}
+  - {fileID: 1309896311}
+  - {fileID: 1907607416}
+  - {fileID: 76328886}
+  - {fileID: 1265217675}
+  - {fileID: 480062195}
+  - {fileID: 992770832}
+  - {fileID: 1588671059}
+  - {fileID: 524324925}
+  - {fileID: 141402805}
+  - {fileID: 285639292}
+  - {fileID: 74610974}
+  - {fileID: 228543953}
+  - {fileID: 87165556}
+  - {fileID: 508888786}
+  - {fileID: 494058219}
+  - {fileID: 758293400}
+  - {fileID: 1618766622}
+  - {fileID: 446887334}
+  - {fileID: 121194324}
+  - {fileID: 1432969309}
+  - {fileID: 90377399}
+  GeneratorSound: {fileID: 0}
+--- !u!65 &1835895618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835895615}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1838151528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012234785446, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
