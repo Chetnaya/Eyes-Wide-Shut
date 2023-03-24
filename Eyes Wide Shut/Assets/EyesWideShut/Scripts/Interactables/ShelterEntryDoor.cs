@@ -6,7 +6,11 @@ public class ShelterEntryDoor : Interactable
 {
     public GameObject EntryDoor;
     private bool isOpen;
-    public GameObject PointerImage;
+    public GameObject ShelterDoorPointerImage;
+    public GameObject MainCentreDoorPointerImage;
+
+    public AudioSource SlideOpenSound;
+
 
     public Arrow arrowScript;
 
@@ -18,18 +22,24 @@ public class ShelterEntryDoor : Interactable
         if(isOpen)
         {
             //Disable Pointer
-            PointerImage.SetActive(false);
+            ShelterDoorPointerImage.SetActive(false);
+            MainCentreDoorPointerImage.SetActive(true);
+
+
             arrowScript.objectiveIndex = 1;
 
             //Door open sound
+            SlideOpenSound.Play();
+
         }
         else
         {
             //Enable Pointer
-            PointerImage.SetActive(true);
-           
+            ShelterDoorPointerImage.SetActive(true);
+            MainCentreDoorPointerImage.SetActive(false);
 
             //Door close sound
+            SlideOpenSound.Play();
         }
 
        
