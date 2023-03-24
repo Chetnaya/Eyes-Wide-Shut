@@ -12868,6 +12868,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &928254478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2756513970135518877, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
+  m_PrefabInstance: {fileID: 2115619914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &929935371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14654,7 +14659,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow: {fileID: 1071731798}
   playerTransform: {fileID: 981054713}
-  Objective: {fileID: 1654476333}
+  Objectives:
+  - {fileID: 1654476333}
+  - {fileID: 928254478}
 --- !u!222 &1071731800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18446,7 +18453,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1356188821
 Canvas:
   m_ObjectHideFlags: 0
@@ -28396,6 +28403,10 @@ PrefabInstance:
     - target: {fileID: 6824490319793441858, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7659736355775544501, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
+      propertyPath: m_Name
+      value: Base - Entry Door
       objectReference: {fileID: 0}
     - target: {fileID: 7753745407040278918, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_RootOrder
