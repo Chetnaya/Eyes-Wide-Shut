@@ -25,5 +25,11 @@ public class Door : Interactable
     {
         doorOpen = !doorOpen;
         door.GetComponent<Animator>().SetBool("IsOpen", doorOpen);
+
+        //Disable smoke
+        //Entry door pointer disable
+        //Switch pointer enable
+        //Set target object for arrow at index 3
+
     }
 }
