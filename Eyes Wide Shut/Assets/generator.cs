@@ -9,13 +9,21 @@ public class generator : Interactable
     private bool lightison = false;
     public AudioSource GeneratorSound;
 
+    public GameObject dialogue06;
+    public GameObject dialogue07;
+
     void Start()
     {
         GeneratorSound = GeneratorSound.GetComponent<AudioSource>();
     }
 
-    protected override void Interact()
+     protected override void Interact()
     {
+        dialogue07.SetActive(true);
+        dialogue06.SetActive(false);
+
+
+        //Lights are off
         if (!lightison)
         {
             // Turn on the lights for switch 1
@@ -26,15 +34,20 @@ public class generator : Interactable
             lightison = true;
             
             GeneratorSound.Play();
+
+            
         }
         else
         {
-            // Turn off the lights for switch 1
+            //Lights are on
             foreach (Light lightComponent in StreetLights)
             {
                 lightComponent.intensity = 0f;
             }
             lightison = false;
+
+            
+
         }
     }
 

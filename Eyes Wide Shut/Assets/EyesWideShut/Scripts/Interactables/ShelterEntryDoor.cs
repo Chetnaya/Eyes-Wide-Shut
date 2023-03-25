@@ -11,6 +11,8 @@ public class ShelterEntryDoor : Interactable
 
     public AudioSource SlideOpenSound;
 
+    public GameObject dialogue06;
+
 
     public Arrow arrowScript;
 
@@ -30,7 +32,7 @@ public class ShelterEntryDoor : Interactable
 
             //Door open sound
             SlideOpenSound.Play();
-
+            
         }
         else
         {
@@ -41,6 +43,8 @@ public class ShelterEntryDoor : Interactable
             //Door close sound
             SlideOpenSound.Play();
         }
+        dialogue06.SetActive(true);
+
 
        
     }
