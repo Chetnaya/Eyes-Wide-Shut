@@ -18,6 +18,7 @@ public class generator : Interactable
     public GameObject CentreDoorPointerImage;
 
     public Arrow arrowimage;
+    public GameObject smoke;
 
     void Start()
     {
@@ -37,6 +38,8 @@ public class generator : Interactable
 
         //set target object for arrow at index 2
         arrowimage.objectiveIndex = 2;
+
+        smoke.SetActive(true);
 
 
         dialogue07.SetActive(true);
