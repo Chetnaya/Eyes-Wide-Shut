@@ -12,6 +12,13 @@ public class generator : Interactable
     public GameObject dialogue06;
     public GameObject dialogue07;
 
+    public GameObject generatorobject;
+
+    public GameObject generatorPointerImage;
+    public GameObject CentreDoorPointerImage;
+
+    public Arrow arrowimage;
+
     void Start()
     {
         GeneratorSound = GeneratorSound.GetComponent<AudioSource>();
@@ -19,6 +26,19 @@ public class generator : Interactable
 
      protected override void Interact()
     {
+        //Generator's box collider will disable
+        generatorobject.GetComponent<BoxCollider>().enabled = false;
+
+        //Generator's Pointer image will disable
+        generatorPointerImage.SetActive(false);
+
+        //Main Centre's pointer image will enable
+        CentreDoorPointerImage.SetActive(true);
+
+        //set target object for arrow at index 2
+        arrowimage.objectiveIndex = 2;
+
+
         dialogue07.SetActive(true);
         dialogue06.SetActive(false);
 
@@ -33,9 +53,7 @@ public class generator : Interactable
             }
             lightison = true;
             
-            GeneratorSound.Play();
-
-            
+            GeneratorSound.Play();    
         }
         else
         {
@@ -45,8 +63,6 @@ public class generator : Interactable
                 lightComponent.intensity = 0f;
             }
             lightison = false;
-
-            
 
         }
     }
