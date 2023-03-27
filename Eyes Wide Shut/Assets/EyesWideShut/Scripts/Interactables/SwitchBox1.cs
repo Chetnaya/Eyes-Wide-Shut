@@ -11,6 +11,11 @@ public class SwitchBox1 : Interactable
     // Variable to keep track of whether the lights are on or off
     private bool isLightOn = false;
 
+    public GameObject switchPointerImage;
+    public GameObject boxPointerImage;
+    public Arrow arrowimage;
+
+
     // Override the base Interact() method to toggle the light intensity
     protected override void Interact()
     {
@@ -22,6 +27,14 @@ public class SwitchBox1 : Interactable
                 lightComponent.intensity = 1.59f;
             }
             isLightOn = true;
+
+            //Enable switch pointer 
+            switchPointerImage.SetActive(false);
+            boxPointerImage.SetActive(true);
+
+            
+            //Set target object for arrow at index 3
+
         }
         else
         {
@@ -31,6 +44,15 @@ public class SwitchBox1 : Interactable
                 lightComponent.intensity = 0f;
             }
             isLightOn = false;
+
+            //Disable switch pointer
+            switchPointerImage.SetActive(true);
+
+            //Enable box pointer Image
+            boxPointerImage.SetActive(false);
+
+            //Set target object for arrow at index 4(weapon box)
+            arrowimage.objectiveIndex = 4;
         }
     }
 }
