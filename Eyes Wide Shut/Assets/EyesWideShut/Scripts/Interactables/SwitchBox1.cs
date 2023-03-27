@@ -37,7 +37,7 @@ public class SwitchBox1 : Interactable
 
             
             //Set target object for arrow at index 3
-            arrowimage.objectiveIndex = 3;
+            arrowimage.objectiveIndex = 4;
 
             SwitchOnSound.Play();
 
@@ -58,7 +58,7 @@ public class SwitchBox1 : Interactable
             boxPointerImage.SetActive(false);
 
             //Set target object for arrow at index 4(weapon box)
-            arrowimage.objectiveIndex = 4;
+            arrowimage.objectiveIndex = 3;
 
             SwitchOnSound.Play();
         }
