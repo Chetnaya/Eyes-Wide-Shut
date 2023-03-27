@@ -4485,52 +4485,11 @@ Terrain:
   m_GroupingID: 0
   m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
---- !u!1 &248281560 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7584363610174988852, guid: 5125d1949d8d26e4ba1cd307159e2bb2, type: 3}
+--- !u!4 &248281564 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7584363610174988855, guid: 5125d1949d8d26e4ba1cd307159e2bb2, type: 3}
   m_PrefabInstance: {fileID: 1132708859}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &248281562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248281560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adcc03aa969cbed42a447c6526beab38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 600742788}
-        m_TargetAssemblyTypeName: UnityEngine.Light, UnityEngine
-        m_MethodName: set_intensity
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 90000
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &248281563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248281560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b6f812e91382ce43b81215218afcc23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useEvents: 1
-  promtMessage: E to Switch On
 --- !u!1001 &262024314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6357,7 +6316,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 117408666}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -88.85, z: 0}
 --- !u!64 &381065139
 MeshCollider:
@@ -7128,17 +7087,17 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417892969}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.949583, y: -1.9690354, z: -3.6343787}
+  m_LocalScale: {x: 0.09924575, y: 0.099245735, z: 0.09924575}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1999761808}
   - {fileID: 86602040}
   - {fileID: 2103399226}
   - {fileID: 1034830973}
-  m_Father: {fileID: 117408666}
-  m_RootOrder: 8
+  m_Father: {fileID: 248281564}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &418492931
 GameObject:
@@ -15931,7 +15890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1168645093625040116, guid: 72edebe5109530942837ca17e77a1130, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.07
+      value: 1.392
       objectReference: {fileID: 0}
     - target: {fileID: 1168645093625040116, guid: 72edebe5109530942837ca17e77a1130, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17051,7 +17010,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2144210813244521619, guid: 5125d1949d8d26e4ba1cd307159e2bb2, type: 3}
       propertyPath: m_Intensity
-      value: 1.45
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144210813244521619, guid: 5125d1949d8d26e4ba1cd307159e2bb2, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2925571665738532404, guid: 5125d1949d8d26e4ba1cd307159e2bb2, type: 3}
       propertyPath: m_Color.b
