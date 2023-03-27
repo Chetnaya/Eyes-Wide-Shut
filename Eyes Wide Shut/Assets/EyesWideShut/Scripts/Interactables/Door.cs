@@ -8,6 +8,12 @@ public class Door : Interactable
     private GameObject door;
     private bool doorOpen;
 
+    public GameObject smokeEffect;
+    public GameObject doorPointerImage;
+    public GameObject switchPointerImage;
+
+    public Arrow arrow;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +33,16 @@ public class Door : Interactable
         door.GetComponent<Animator>().SetBool("IsOpen", doorOpen);
 
         //Disable smoke
+        smokeEffect.SetActive(false);
+
         //Entry door pointer disable
+        doorPointerImage.SetActive(false);
+
         //Switch pointer enable
+        switchPointerImage.SetActive(true);
+
         //Set target object for arrow at index 3
+        arrow.objectiveIndex = 3;
 
     }
 }
