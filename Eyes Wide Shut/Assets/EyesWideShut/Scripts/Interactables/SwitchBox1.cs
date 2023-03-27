@@ -14,6 +14,9 @@ public class SwitchBox1 : Interactable
     public GameObject switchPointerImage;
     public GameObject boxPointerImage;
     public Arrow arrowimage;
+    
+    public AudioSource SwitchOnSound;
+
 
 
     // Override the base Interact() method to toggle the light intensity
@@ -35,6 +38,8 @@ public class SwitchBox1 : Interactable
             
             //Set target object for arrow at index 3
 
+            SwitchOnSound.Play();
+
         }
         else
         {
@@ -53,6 +58,8 @@ public class SwitchBox1 : Interactable
 
             //Set target object for arrow at index 4(weapon box)
             arrowimage.objectiveIndex = 4;
+
+            SwitchOnSound.Play();
         }
     }
 }
