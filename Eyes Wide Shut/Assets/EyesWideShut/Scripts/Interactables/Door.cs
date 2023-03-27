@@ -12,19 +12,21 @@ public class Door : Interactable
     public GameObject doorPointerImage;
     public GameObject switchPointerImage;
 
+    [SerializeField]
+    private AudioSource doorOpenSound;
+
+    [SerializeField]
+    private AudioSource doorCloseSound;
+
     public Arrow arrow;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        doorOpenSound = doorOpenSound .GetComponent<AudioSource>();
+        doorCloseSound = doorCloseSound.GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     //Design interaction using code
     protected override void Interact()
@@ -43,6 +45,15 @@ public class Door : Interactable
 
         //Set target object for arrow at index 3
         arrow.objectiveIndex = 3;
+
+        if (doorOpen)
+        {
+            doorOpenSound.Play();
+        }
+        else
+        {
+            doorCloseSound.Play();
+        }
 
     }
 }

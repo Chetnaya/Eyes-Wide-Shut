@@ -7420,6 +7420,8 @@ MonoBehaviour:
   smokeEffect: {fileID: 1452371360}
   doorPointerImage: {fileID: 903924344}
   switchPointerImage: {fileID: 1146933807}
+  doorOpenSound: {fileID: 1946549460}
+  doorCloseSound: {fileID: 731645610}
   arrow: {fileID: 1071731799}
 --- !u!65 &443934827
 BoxCollider:
@@ -9569,7 +9571,7 @@ Transform:
   - {fileID: 1006296190}
   - {fileID: 935545045}
   m_Father: {fileID: 117475386}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 179.95, z: 0}
 --- !u!65 &609144455
 BoxCollider:
@@ -34639,6 +34641,8 @@ MonoBehaviour:
   smokeEffect: {fileID: 1452371360}
   doorPointerImage: {fileID: 903924344}
   switchPointerImage: {fileID: 1146933807}
+  doorOpenSound: {fileID: 1946549460}
+  doorCloseSound: {fileID: 731645610}
   arrow: {fileID: 1071731799}
 --- !u!65 &2091042358
 BoxCollider:
@@ -35283,7 +35287,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1875161217862880896, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1875161218648548599, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_RootOrder
@@ -35331,11 +35335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1876665681830261705, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1879231081900616475, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1879440736472696677, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35351,7 +35355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2756513970135518877, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3345664094103322523, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_RootOrder
