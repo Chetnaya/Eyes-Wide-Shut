@@ -37,6 +37,7 @@ public class SwitchBox1 : Interactable
 
             
             //Set target object for arrow at index 3
+            arrowimage.objectiveIndex = 3;
 
             SwitchOnSound.Play();
 
