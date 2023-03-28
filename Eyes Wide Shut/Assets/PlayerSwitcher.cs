@@ -16,6 +16,7 @@ public class PlayerSwitcher : MonoBehaviour
         lastPlayerPosition = player1.transform.position;
         // player2.transform.position = player1.transform.position;
         // player2.transform.rotation = player1.transform.rotation;
+        player2.transform.localScale = new Vector3(0.52f, 0.82f, 0.52f);
     }
 
     void Update()
@@ -50,8 +51,16 @@ public class PlayerSwitcher : MonoBehaviour
                 // Switching to player 2, instantiate the gun prefab
                 gunInstance = Instantiate(gunPrefab, player2.transform);
             }
+            //Scaling the player2
+            if (currentPlayerIndex == 1)
+            {
+                player2.transform.localScale = new Vector3(0.52f, 0.82f, 0.52f);
+            }
+
             player2.transform.position = player1.transform.position;
             player2.transform.rotation = player1.transform.rotation;
+
+            player2.transform.localScale = new Vector3(0.52f, 0.82f, 0.52f);
         }
     }
 }
