@@ -19,7 +19,14 @@ public class Weaponbox : Interactable
     //Players
     public GameObject player01;
     public GameObject player02;
+    //Audio
+    public AudioSource WeaponInstructions;
     //-----------------------------
+
+    void Start()
+    {
+        WeaponInstructions = WeaponInstructions.GetComponent<AudioSource>();
+    }
 
     protected override void Interact()
     {
@@ -30,6 +37,9 @@ public class Weaponbox : Interactable
 
         //Enabling
         instructionPanel.SetActive(true);
+
+        //Playing the AudioSource
+        WeaponInstructions.Play();
 
     }
 
