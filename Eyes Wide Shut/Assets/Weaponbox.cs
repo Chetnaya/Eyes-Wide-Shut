@@ -9,6 +9,9 @@ public class Weaponbox : Interactable
 
     public GameObject promtText;
     public GameObject Arrow;
+
+    public GameObject dialoguebox9;
+    public GameObject dialoguebox8;
     
     protected override void Interact()
     {
@@ -17,5 +20,10 @@ public class Weaponbox : Interactable
 
         promtText.SetActive(false);
         Arrow.SetActive(false);
+
+        dialoguebox8.SetActive(false);
+        dialoguebox9.SetActive(true);
+
+
     }
 }
