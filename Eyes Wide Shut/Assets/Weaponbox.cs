@@ -4,26 +4,23 @@ using UnityEngine;
 
 public class Weaponbox : Interactable
 {
-    public GameObject player1;
-    public GameObject player2;
-
+    //Gameobjects that are to be diabled
     public GameObject promtText;
     public GameObject Arrow;
-
-    public GameObject dialoguebox9;
     public GameObject dialoguebox8;
+
+    //Gameobjects to be enabled
+    public GameObject instructionPanel;
     
     protected override void Interact()
     {
-        player1.SetActive(false);
-        player2.SetActive(true);
-
+        //Disabling
         promtText.SetActive(false);
         Arrow.SetActive(false);
-
         dialoguebox8.SetActive(false);
-        dialoguebox9.SetActive(true);
 
+        //Enabling
+        instructionPanel.SetActive(true);
 
     }
 }
