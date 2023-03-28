@@ -6572,6 +6572,9 @@ MonoBehaviour:
   Arrow: {fileID: 1071731797}
   dialoguebox8: {fileID: 812378630}
   instructionPanel: {fileID: 1292206568}
+  dialoguebox9: {fileID: 101024267}
+  player01: {fileID: 981054695}
+  player02: {fileID: 1694256848}
 --- !u!1001 &390771149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16111,7 +16114,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1041296932}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 384775037}
+        m_TargetAssemblyTypeName: Weaponbox, Assembly-CSharp
+        m_MethodName: PlayersSwitch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1041296932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31030,6 +31045,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012234785446, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
   m_PrefabInstance: {fileID: 289908291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1694256848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 173116, guid: c391f12a928274acab8576bb6030641d, type: 3}
+  m_PrefabInstance: {fileID: 1312517585}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1695392334
 GameObject:
