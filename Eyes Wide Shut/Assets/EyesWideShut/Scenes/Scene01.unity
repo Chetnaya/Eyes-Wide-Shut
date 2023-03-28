@@ -6362,6 +6362,8 @@ MonoBehaviour:
   promtMessage: Equip Weapons
   player1: {fileID: 981054695}
   player2: {fileID: 1694256848}
+  promtText: {fileID: 1418956851}
+  Arrow: {fileID: 1071731797}
 --- !u!1001 &390771149
 PrefabInstance:
   m_ObjectHideFlags: 0
