@@ -98,6 +98,31 @@ public class GunController : MonoBehaviour
    void DetermineRecoil()
    {
         transform.localPosition -= Vector3.forward * 0.1f;
+        if(randomizeRecoil)
+        {
+            float xRecoil = Random.Range(-randomRecoilConstraints.x, randomRecoilConstraints.x);
+            float yRecoil = Random.Range(-randomRecoilConstraints.y, randomRecoilConstraints.y);
+            Vector2 recoil = new Vector2(xRecoil, yRecoil);  
+        }
+   }
+   /*-------------------------------------------------------------------
+   -----Function for the target objects that are to be shooted at------
+   ------------------------------------------------------------------*/
+   void RaycastForEnemy()
+   {
+        RaycastHit hit;
+        if(Physics.Raycast(transform.parent.position, transform.parent.forward, out hit, 1 << LayerMask.NameToLayer("Enemy")))
+        {
+            //All actions are performed in the TRY but if there are any errors, it will jump to the CATCH loop.
+            try
+            {
+                Debug.Log("Hit an enemy");
+                Rigidbody rb = hit.transform.GetComponent<Rigidbody>();
+                rb.constraints = RigidbodyConstraints.None;
+                rb.AddForce(transform.parent.transform.forward * 500);
+            }
+            catch{ }
+        }
    }
    /*-------------------------------------------------------------------
    coroutine is a function that can pause its execution and resume it later.
@@ -105,6 +130,7 @@ public class GunController : MonoBehaviour
    IEnumerator ShootGun()
    {
         DetermineRecoil();
+        RaycastForEnemy();
         StartCoroutine(muzzleFlash());
         yield return new WaitForSeconds(fireRate);
         canShoot =  true;
@@ -117,4 +143,5 @@ public class GunController : MonoBehaviour
         muzzleFlashEffect.sprite = null;
         muzzleFlashEffect.color = new Color(0,0,0,0);
     }
+
 }
