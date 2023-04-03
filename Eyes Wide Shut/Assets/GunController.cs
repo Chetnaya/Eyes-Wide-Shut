@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GunController : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class GunController : MonoBehaviour
    public bool canShoot;
    public int currentAmmoInClip;
    public int ammoInReserve;
+/*-----------------------------------------------------------------
+   --------------------------Game Objects-------------------------
+   --------------------------------------------------------------*/
+   public GameObject gunParticle;
    /*-------------------------------------------------------------
    -----Start is called on the frame when a script is enabled-----
    just before any of the Update methods is called the first time
@@ -42,6 +47,7 @@ public class GunController : MonoBehaviour
             currentAmmoInClip--;
             //Function to start the existing coroutine function in the game
             StartCoroutine(ShootGun());
+            gunParticle.SetActive(true);
         }
         //Reload Functionality
         else if(Input.GetKeyDown(KeyCode.R)  && currentAmmoInClip < clipSize && ammoInReserve > 0)
@@ -57,7 +63,11 @@ public class GunController : MonoBehaviour
                 currentAmmoInClip = clipSize;
                 ammoInReserve -= amountNeededforReload;
             }
-
+        }
+        else
+         // Stop the gun particle effect when the player is not shooting
+        {
+            gunParticle.SetActive(false);
         }
    }
    /*-------------------------------------------------------------------
@@ -65,8 +75,10 @@ public class GunController : MonoBehaviour
    ------------------------------------------------------------------*/
    IEnumerator ShootGun()
    {
+       // Play the gun particle effect
+        
+        
         yield return new WaitForSeconds(fireRate);
         canShoot =  true;
    }
-
 }
