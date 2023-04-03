@@ -14,9 +14,9 @@ public class GunController : MonoBehaviour
    /*-------------------------------------------------------------
    ----------------------Non-Static Variables---------------------
    --------------------------------------------------------------*/
-   bool canShoot;
-   int currentAmmoInClip;
-   int ammoInReserve;
+   public bool canShoot;
+   public int currentAmmoInClip;
+   public int ammoInReserve;
    /*-------------------------------------------------------------
    -----Start is called on the frame when a script is enabled-----
    just before any of the Update methods is called the first time
