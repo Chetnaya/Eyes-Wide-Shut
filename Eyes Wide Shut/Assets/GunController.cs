@@ -35,14 +35,30 @@ public class GunController : MonoBehaviour
    {
         //If holding left mouse button and Can shoot and clip has ammo
         if(Input.GetMouseButton(0) && canShoot && currentAmmoInClip > 0)
+        {
+            //Can shoot will be false whenever player shoots
+            canShoot = false;
+            //subtract one ammo from the clip
+            currentAmmoInClip--;
+            //Function to start the existing coroutine function in the game
+            StartCoroutine(ShootGun());
+        }
+        //Reload Functionality
+        else if(Input.GetKeyDown(KeyCode.R)  && currentAmmoInClip < clipSize && ammoInReserve > 0)
+        {
+            int amountNeededforReload = clipSize - currentAmmoInClip;
+            if(amountNeededforReload >= ammoInReserve)
             {
-                //Can shoot will be false whenever player shoots
-                canShoot = false;
-                //subtract one ammo from the clip
-                currentAmmoInClip--;
-                //Function to start the existing coroutine function in the game
-                StartCoroutine(ShootGun());
+                currentAmmoInClip += ammoInReserve;
+                ammoInReserve -= amountNeededforReload;
             }
+            else
+            {
+                currentAmmoInClip = clipSize;
+                ammoInReserve -= amountNeededforReload;
+            }
+
+        }
    }
    /*-------------------------------------------------------------------
    coroutine is a function that can pause its execution and resume it later.
