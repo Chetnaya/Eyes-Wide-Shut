@@ -8743,11 +8743,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28b2b68147fce3c4187add1104d6ccd8, type: 3}
---- !u!1 &508882210 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2950606243749640870, guid: 38a9687107ef59e43bf0f06ad4ea76ab, type: 3}
-  m_PrefabInstance: {fileID: 1175316149}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &508888784
 GameObject:
   m_ObjectHideFlags: 0
@@ -16405,15 +16400,15 @@ RectTransform:
   m_GameObject: {fileID: 1041334388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.33, y: 1.33, z: 1.33}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 879964959}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2.7, y: -0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1041334390
@@ -16429,7 +16424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16534,7 +16529,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1053167087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9731dec9ada341b4ba52c64bb40376a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 46f6250fce3ede644b026b57bbe86949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 0.1
@@ -16543,7 +16538,13 @@ MonoBehaviour:
   canShoot: 0
   currentAmmoInClip: 0
   ammoInReserve: 0
-  gunParticle: {fileID: 508882210}
+  muzzleFlashEffect: {fileID: 1041334390}
+  flashes:
+  - {fileID: 21300000, guid: 4803a3067690ea4459b8f7d4b517df10, type: 3}
+  - {fileID: 21300000, guid: 311324e28201ff1499a7765c3ed17cd7, type: 3}
+  - {fileID: 21300000, guid: 8a71675d469268540a4433fc8978c3dd, type: 3}
+  - {fileID: 21300000, guid: 4b65802b7afaf8840896b440d8e32ca1, type: 3}
+  - {fileID: 21300000, guid: e84f1d0d24be6d6489a19de514d7ddbd, type: 3}
 --- !u!1 &1053892529
 GameObject:
   m_ObjectHideFlags: 0
