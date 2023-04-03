@@ -70,7 +70,6 @@ public class GunController : MonoBehaviour
                 currentAmmoInClip = clipSize;
                 ammoInReserve -= amountNeededforReload;
             }
-
         }
    }
    /*-------------------------------------------------------------
@@ -79,10 +78,12 @@ public class GunController : MonoBehaviour
    void DetermineAim()
    {
         Vector3 target = normalLocalPosition;
-        if(Input.GetMouseButton(1)) target = aimingLocalPosition;
-
+        if(Input.GetMouseButton(1)) 
+        {
+            target = aimingLocalPosition;
+        }
+        //Lerp Function - linearly interpolates between two Vector3 values.
         Vector3 desiredPosition = Vector3.Lerp(transform.localPosition, target, Time.deltaTime * aimSmoothing);
-
         transform.localPosition = desiredPosition;
    }
    /*-------------------------------------------------------------------
@@ -102,5 +103,4 @@ public class GunController : MonoBehaviour
         muzzleFlashEffect.sprite = null;
         muzzleFlashEffect.color = new Color(0,0,0,0);
     }
-
 }
