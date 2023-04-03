@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GunController : MonoBehaviour
-{
+{ 
    /*--------------------------------------------------------------
    -----------------------Static Variables-------------------------
    ---------------------------------------------------------------*/
@@ -21,7 +21,8 @@ public class GunController : MonoBehaviour
 /*-----------------------------------------------------------------
    --------------------------Game Objects-------------------------
    --------------------------------------------------------------*/
-   public GameObject gunParticle;
+   public Image muzzleFlashEffect;
+   public Sprite[] flashes;
    /*-------------------------------------------------------------
    -----Start is called on the frame when a script is enabled-----
    just before any of the Update methods is called the first time
@@ -47,7 +48,6 @@ public class GunController : MonoBehaviour
             currentAmmoInClip--;
             //Function to start the existing coroutine function in the game
             StartCoroutine(ShootGun());
-            gunParticle.SetActive(true);
         }
         //Reload Functionality
         else if(Input.GetKeyDown(KeyCode.R)  && currentAmmoInClip < clipSize && ammoInReserve > 0)
@@ -63,11 +63,7 @@ public class GunController : MonoBehaviour
                 currentAmmoInClip = clipSize;
                 ammoInReserve -= amountNeededforReload;
             }
-        }
-        else
-         // Stop the gun particle effect when the player is not shooting
-        {
-            gunParticle.SetActive(false);
+
         }
    }
    /*-------------------------------------------------------------------
@@ -75,10 +71,17 @@ public class GunController : MonoBehaviour
    ------------------------------------------------------------------*/
    IEnumerator ShootGun()
    {
-       // Play the gun particle effect
-        
-        
+        StartCoroutine(muzzleFlash());
         yield return new WaitForSeconds(fireRate);
         canShoot =  true;
    }
+   IEnumerator muzzleFlash()
+    {
+        muzzleFlashEffect.sprite = flashes[Random.Range(0, flashes.Length)];
+        muzzleFlashEffect.color = Color.white;
+        yield return new WaitForSeconds(0.05f);
+        muzzleFlashEffect.sprite = null;
+        muzzleFlashEffect.color = new Color(0,0,0,0);
+    }
+
 }
