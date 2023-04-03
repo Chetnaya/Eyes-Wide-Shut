@@ -18,11 +18,17 @@ public class GunController : MonoBehaviour
    public bool canShoot;
    public int currentAmmoInClip;
    public int ammoInReserve;
-/*-----------------------------------------------------------------
+   /*-------------------------------------------------------------
    --------------------------Game Objects-------------------------
    --------------------------------------------------------------*/
    public Image muzzleFlashEffect;
    public Sprite[] flashes;
+   /*-------------------------------------------------------------
+   ----------------------------Aiming-----------------------------
+   --------------------------------------------------------------*/
+   public Vector3 normalLocalPosition;
+   public Vector3 aimingLocalPosition;
+   public float aimSmoothing = 10;
    /*-------------------------------------------------------------
    -----Start is called on the frame when a script is enabled-----
    just before any of the Update methods is called the first time
@@ -39,6 +45,7 @@ public class GunController : MonoBehaviour
    ---------------------------------------------------------------*/
    void Update()
    {
+        DetermineAim();
         //If holding left mouse button and Can shoot and clip has ammo
         if(Input.GetMouseButton(0) && canShoot && currentAmmoInClip > 0)
         {
@@ -65,6 +72,18 @@ public class GunController : MonoBehaviour
             }
 
         }
+   }
+   /*-------------------------------------------------------------
+   ----------------------Function for Aiming----------------------
+   --------------------------------------------------------------*/
+   void DetermineAim()
+   {
+        Vector3 target = normalLocalPosition;
+        if(Input.GetMouseButton(1)) target = aimingLocalPosition;
+
+        Vector3 desiredPosition = Vector3.Lerp(transform.localPosition, target, Time.deltaTime * aimSmoothing);
+
+        transform.localPosition = desiredPosition;
    }
    /*-------------------------------------------------------------------
    coroutine is a function that can pause its execution and resume it later.
