@@ -30,6 +30,12 @@ public class GunController : MonoBehaviour
    public Vector3 aimingLocalPosition;
    public float aimSmoothing = 10;
    /*-------------------------------------------------------------
+   -------------------------Weapon Recoil-------------------------
+   --------------------------------------------------------------*/
+   public bool randomizeRecoil;
+   public Vector2 randomRecoilConstraints;
+   public Vector2 recoilPattern;
+   /*-------------------------------------------------------------
    -----Start is called on the frame when a script is enabled-----
    just before any of the Update methods is called the first time
    ---------------------------------------------------------------*/
@@ -86,11 +92,19 @@ public class GunController : MonoBehaviour
         Vector3 desiredPosition = Vector3.Lerp(transform.localPosition, target, Time.deltaTime * aimSmoothing);
         transform.localPosition = desiredPosition;
    }
+   /*-------------------------------------------------------------
+   ---------------Functionality for Recoil of weapon--------------
+   --------------------------------------------------------------*/
+   void DetermineRecoil()
+   {
+        transform.localPosition -= Vector3.forward * 0.1f;
+   }
    /*-------------------------------------------------------------------
    coroutine is a function that can pause its execution and resume it later.
    ------------------------------------------------------------------*/
    IEnumerator ShootGun()
    {
+        DetermineRecoil();
         StartCoroutine(muzzleFlash());
         yield return new WaitForSeconds(fireRate);
         canShoot =  true;
