@@ -10,12 +10,19 @@ public class Weaponbox : Interactable
     public GameObject promtText;
     public GameObject Arrow;
     public GameObject dialoguebox8;
+    public GameObject weaponboxPointerImage;
     /*-----------------------------------------------------------
     -------------GAME OBJECTS TO BE ENABLED---------------------
     -------------------------------------------------------------*/
     public GameObject instructionPanel;
     public GameObject dialoguebox9;
     public GameObject gun;
+    public GameObject ExitDoorPointerCanvas;
+    public GameObject MovementDetector_Shelter;
+    /*-----------------------------------------------------------
+    --------------REFERENCE FROM OTHER SCRIPT---------------------
+    -------------------------------------------------------------*/
+    public Arrow arrowimage;
     /*-----------------------------------------------------------
     ----------------AUDIO SOURCE GAME OBJECT---------------------
     -------------------------------------------------------------*/
@@ -33,11 +40,10 @@ public class Weaponbox : Interactable
     -------------------------------------------------------------*/
     protected override void Interact()
     {
-        //Disabling
+        //Disabling and enabling
         dialoguebox8.SetActive(false);
-
-        //Enabling
         instructionPanel.SetActive(true);
+        MovementDetector_Shelter.SetActive(true);
 
         //Playing the AudioSource
         WeaponInstructions.Play();
@@ -53,5 +59,9 @@ public class Weaponbox : Interactable
         
         dialoguebox9.SetActive(true);
         instructionPanel.SetActive(false);
+
+        weaponboxPointerImage.SetActive(false);
+        ExitDoorPointerCanvas.SetActive(true);
+        arrowimage.objectiveIndex = 5;
     }
 }
