@@ -23,6 +23,7 @@ public class GunController : MonoBehaviour
    --------------------------------------------------------------*/
    public Image muzzleFlashEffect;
    public Sprite[] flashes;
+   public ParticleSystem muzzleFlashParticleSystem;
    public AudioSource shootingAudio;
    /*-------------------------------------------------------------
    ----------------------------Aiming-----------------------------
@@ -47,6 +48,7 @@ public class GunController : MonoBehaviour
        ammoInReserve = reservedAmmoCapacity;
        canShoot = true;
        shootingAudio = shootingAudio.GetComponent<AudioSource>();
+       muzzleFlashParticleSystem = muzzleFlashParticleSystem.GetComponent<ParticleSystem>();
 
    }
    /*-------------------------------------------------------------
@@ -135,10 +137,29 @@ public class GunController : MonoBehaviour
         DetermineRecoil();
         RaycastForEnemy();
         StartCoroutine(muzzleFlash());
-        yield return new WaitForSeconds(fireRate);
-        canShoot =  true;
+
+        // Create a new instance of the muzzle flash particle system
+        GameObject muzzleFlashObject = Instantiate(muzzleFlashParticleSystem.gameObject, transform.position, transform.rotation);
+        ParticleSystem muzzle_Flash = muzzleFlashObject.GetComponent<ParticleSystem>();
+        muzzleFlashObject.transform.position = muzzleFlashParticleSystem.transform.position;
+        muzzleFlashObject.transform.rotation = muzzleFlashParticleSystem.transform.rotation;
+
+        // Play the muzzle flash particle system
+        if (muzzle_Flash != null && currentAmmoInClip > 0)
+        {
+            muzzle_Flash.Play();
+        }
+
         shootingAudio.Play();
+        
+        yield return new WaitForSeconds(fireRate);
+
+        canShoot =  true;
+        // Destroy the muzzle flash particle system after a short delay
+        Destroy(muzzleFlashObject, 0.5f);
+        yield return null;
    }
+   //-------------------------------------------------------------------
    IEnumerator muzzleFlash()
     {
         muzzleFlashEffect.sprite = flashes[Random.Range(0, flashes.Length)];
@@ -147,5 +168,4 @@ public class GunController : MonoBehaviour
         muzzleFlashEffect.sprite = null;
         muzzleFlashEffect.color = new Color(0,0,0,0);
     }
-
 }
