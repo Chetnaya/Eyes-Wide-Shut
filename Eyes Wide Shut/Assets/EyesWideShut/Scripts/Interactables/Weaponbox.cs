@@ -17,9 +17,7 @@ public class Weaponbox : Interactable
     public GameObject instructionPanel;
     public GameObject dialoguebox9;
     public GameObject gun;
-    //Players
-    public GameObject player01;
-    public GameObject player02;
+  
     //Audio
     public AudioSource WeaponInstructions;
     //-----------------------------
