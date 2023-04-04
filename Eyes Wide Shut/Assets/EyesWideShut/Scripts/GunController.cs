@@ -23,6 +23,7 @@ public class GunController : MonoBehaviour
    --------------------------------------------------------------*/
    public Image muzzleFlashEffect;
    public Sprite[] flashes;
+   public AudioSource shootingAudio;
    /*-------------------------------------------------------------
    ----------------------------Aiming-----------------------------
    --------------------------------------------------------------*/
@@ -45,6 +46,8 @@ public class GunController : MonoBehaviour
        currentAmmoInClip = clipSize;
        ammoInReserve = reservedAmmoCapacity;
        canShoot = true;
+       shootingAudio = shootingAudio.GetComponent<AudioSource>();
+
    }
    /*-------------------------------------------------------------
    ------------------Update is called every frame-----------------
@@ -134,6 +137,7 @@ public class GunController : MonoBehaviour
         StartCoroutine(muzzleFlash());
         yield return new WaitForSeconds(fireRate);
         canShoot =  true;
+        shootingAudio.Play();
    }
    IEnumerator muzzleFlash()
     {
