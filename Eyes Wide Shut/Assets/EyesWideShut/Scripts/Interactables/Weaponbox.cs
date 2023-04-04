@@ -16,6 +16,7 @@ public class Weaponbox : Interactable
     //-----------------------------
     public GameObject instructionPanel;
     public GameObject dialoguebox9;
+    public GameObject gun;
     //Players
     public GameObject player01;
     public GameObject player02;
@@ -31,8 +32,6 @@ public class Weaponbox : Interactable
     protected override void Interact()
     {
         //Disabling
-        promtText.SetActive(false);
-        Arrow.SetActive(false);
         dialoguebox8.SetActive(false);
 
         //Enabling
@@ -44,13 +43,12 @@ public class Weaponbox : Interactable
     }
 
     //Instruction Panel Button Functionality
-    public void PlayersSwitch()
+    public void GunDisplay()
     {
-        player01.SetActive(false);
-        player02.SetActive(true);
-
+        //Gun will be active
+        gun.SetActive(true);
+        
         dialoguebox9.SetActive(true);
-
         instructionPanel.SetActive(false);
     }
 }
