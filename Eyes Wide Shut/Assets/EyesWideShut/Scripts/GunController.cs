@@ -56,6 +56,11 @@ public class GunController : MonoBehaviour
    ---------------------------------------------------------------*/
    void Update()
    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            gameObject.SetActive(!gameObject.activeSelf);
+        }
+
         DetermineAim();
         //If holding left mouse button and Can shoot and clip has ammo
         if(Input.GetMouseButton(0) && canShoot && currentAmmoInClip > 0)
