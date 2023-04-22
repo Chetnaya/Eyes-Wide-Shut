@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAi : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    /*--------------------------------------------------------------
+    -----------------------Static Variables-------------------------
+    ---------------------------------------------------------------*/
+    public NavMeshAgent agent;
+    public Transform player;
+    public LayerMask Groundlayer, Playerlayer;
+    /*--------------------------------------------------------------
+    --------------------------Patrolling----------------------------
+    ---------------------------------------------------------------*/
+    public Vector3 walkPoint;
+    bool isWalkPointSet;
+    public float walkPointRange;
+    /*--------------------------------------------------------------
+    --------------------------Attacking-----------------------------
+    ---------------------------------------------------------------*/
+    public float timeBetweenAttacks;
+    bool already Attacked;
+    /*--------------------------------------------------------------
+    ----------------------------States------------------------------
+    ---------------------------------------------------------------*/
+    public float sightRange, attackRange; 
+    public bool playerInSightRange, playerInAttackRange;
+    
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+
+
+
 }
