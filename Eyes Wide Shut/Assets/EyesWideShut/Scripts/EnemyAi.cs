@@ -68,12 +68,24 @@ public class EnemyAi : MonoBehaviour
 
     private void ChasePlayer()
     {
-
+        agent.SetDestination(player.position);
     }
 
     private void AttackPlayer()
     {
+        //Make sure enemy doesn't move
+        agent.SetDestination(transform.position);
+        //Make the enemy look the player
+        transform.LookAt(player);
 
+        if(!alreadyAttacked)
+        {
+            //------------ATTACK CODE HERE----------------
+
+            //---------------------------------------------
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks );
+        }
     }
     /*--------------------------------------------------------------
     ----------------------------------------------------------------
@@ -91,6 +103,22 @@ public class EnemyAi : MonoBehaviour
         {
             isWalkPointSet = true; 
         }
+    }
+    private void ResetAttack()
+    {
+        alreadyAttacked = false;
+    }
+    public void TakeDamage()
+    {
+
+    }
+    public void HealthDamage()
+    {
+
+    }
+    public void DestroyEnemy()
+    {
+        
     }
 
     
