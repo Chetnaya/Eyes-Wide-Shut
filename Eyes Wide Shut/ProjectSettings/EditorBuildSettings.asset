@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/EyesWideShut/Scenes/MainMenu.unity
     guid: 04de509102c4e294cb1c7d168e87222b
   - enabled: 1
-    path: Assets/EyesWideShut/Scenes/Scene01.unity
+    path: Assets/EyesWideShut/Scenes/Base-Night.unity
     guid: e8c9bb959e4d0cc4c92a006ee5a7f880
   m_configObjects: {}
