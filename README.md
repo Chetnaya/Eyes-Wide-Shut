@@ -1,4 +1,4 @@
-# Eyes Wide Shut
+# Eyes Wide Shut - A game demo
 This is a FPS shooter game demo with prime focus on story telling. The game is set in a dystopian future where players must navigate a fake reality and uncover the truth behind a government conspiracy, all while battling zombies and mutants in a high-tech world.
 #
 ![SS (3)](https://github.com/Chetnaya/Eyes-Wide-Shut/assets/90476376/8e7ec6b1-df1f-4959-8956-c10b9167744c)
